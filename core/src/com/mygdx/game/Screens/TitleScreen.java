@@ -25,7 +25,7 @@ public class TitleScreen implements Screen {
         game = aGame;
         stage = new Stage(new ScreenViewport());
 
-        Label title = new Label("Title Screen", MyGdxGame.skin,"big-black");
+        Label title = new Label("There and Back Again", MyGdxGame.skin,"big-black");
         title.setAlignment(Align.center);
         title.setY(Gdx.graphics.getHeight()*2/3);
         title.setWidth(Gdx.graphics.getWidth());
