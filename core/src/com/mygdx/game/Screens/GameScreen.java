@@ -40,7 +40,6 @@ public class GameScreen implements Screen {
         stage = new Stage(new ScreenViewport());
 
         Image map = new Image(new Texture("map.jpg"));
-        stage = new Stage(new ScreenViewport());
         stage.addActor(map);
         camera = (OrthographicCamera) stage.getViewport().getCamera();
         camera.translate(startX,startY);
@@ -62,7 +61,7 @@ public class GameScreen implements Screen {
         long secondFromStart = Instant.now().toEpochMilli()-startTime;
         percent = (secondFromStart%animation_duration)/animation_duration;
         percent = (float)Math.cos(percent*Math.PI*2)/2+0.5f;
-        Gdx.app.log("rendedr","secondFromStart:"+ secondFromStart+", %:"+percent);
+        Gdx.app.log("render","secondFromStart:"+ secondFromStart+", %:"+percent);
         Gdx.gl.glClearColor(1, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         moveCamera();
